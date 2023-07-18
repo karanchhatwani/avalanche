@@ -8,9 +8,9 @@
 * The backend.tf file is being used to store terraform state file in a GCS storage.
 
 **Modules:**
-* _Node_: This module consists of 4 resources, these are for compute_disk, compute_engine, compute_firewall and compute_address.
+* _Node_: This module consists of 4 resources, these are for compute_disk, compute_engine, compute_firewall and compute_address. This module also has count as a meta-argument to accept & create as many instances,, external IPs and disks as required.
 * _Vpc:_ This module enables API at first using google_project_service resource then it’ll create VPC and subnet using compute_network and compute_subnetwork resources.
 
 The architecture diagram attached below shows the visual representation of above terraform code:
 
-![image](https://github.com/karanchhatwani/avalanche/assets/50554667/bb359447-1f6d-45fd-b89f-1049f705ba74)
+![image](https://github.com/karanchhatwani/avalanche/assets/50554667/66f68d35-b8da-4bfb-8e36-2fa85753d520)
